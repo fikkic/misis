@@ -129,5 +129,16 @@ def calculate_average(list):
     average = total / len(list)
 
     return average
+4
+def create_dictionary(list):
+    dictionary = {}
+
+    for element in list:
+        if element in dictionary:
+            dictionary[element] += 1
+        else:
+            dictionary[element] = 1
+
+    return dictionary
 
 '''
