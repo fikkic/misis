@@ -73,4 +73,48 @@ for bukva in westi:
 
         kolvo_glasnuh += 1
 
-print(kolvo_glasnuh)'''
+print(kolvo_glasnuh)
+8
+def check_password(password):
+    if len(password) < 8:
+        return False
+
+    has_upper = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+            break
+    if not has_upper:
+        return False
+
+    has_lower = False
+    for char in password:
+        if char.islower():
+            has_lower = True
+            break
+    if not has_lower:
+        return False
+
+    has_digit = False
+    for char in password:
+        if char.isdigit():
+            has_digit = True
+            break
+    if not has_digit:
+        return False
+
+    return True
+9
+def convert_temperature(temp, from_scale, to_scale):
+    if from_scale not in ["Цельсий", "Фаренгейт"]:
+        raise ValueError("Неизвестная исходная шкала.")
+    if to_scale not in ["Цельсий", "Фаренгейт"]:
+        raise ValueError("Неизвестная целевая шкала.")
+
+    if from_scale == "Цельсий" and to_scale == "Фаренгейт":
+        temp = (temp * 9/5) + 32
+    elif from_scale == "Фаренгейт" and to_scale == "Цельсий":
+        temp = (temp - 32) * 5/9
+
+    return temp
+'''
