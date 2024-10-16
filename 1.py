@@ -33,11 +33,11 @@ else:
     noga = 0
 konechnaya_sraka = sraka - (sraka * noga)
 print('Конечная стоимость товара: ', konechnaya_sraka)
-5
+1
 for sigma in range(5):
     a = int(input())
 print(a + a + a + a + a)
-6
+2
 pupa = int(input())
 
 factorial = 1
@@ -45,7 +45,7 @@ for jopa in range(1, pupa + 1):
     factorial *= jopa
 
 print(factorial)
-7
+3
 terka = int(input("Введите число: "))
 
 if terka <= 1:
@@ -61,7 +61,7 @@ else:
         print("Число простое")
     else:
         print("Число не простое")
-8
+4
 westi = input()
 
 kolvo_glasnuh = 0
@@ -74,7 +74,7 @@ for bukva in westi:
         kolvo_glasnuh += 1
 
 print(kolvo_glasnuh)
-8
+1
 def check_password(password):
     if len(password) < 8:
         return False
@@ -104,7 +104,7 @@ def check_password(password):
         return False
 
     return True
-9
+2
 def convert_temperature(temp, from_scale, to_scale):
     if from_scale not in ["Цельсий", "Фаренгейт"]:
         raise ValueError("Неизвестная исходная шкала.")
@@ -117,4 +117,17 @@ def convert_temperature(temp, from_scale, to_scale):
         temp = (temp - 32) * 5/9
 
     return temp
+3
+def calculate_average(list):
+    if not list:
+        return None
+
+    total = 0
+    for number in list:
+        total += number
+
+    average = total / len(list)
+
+    return average
+
 '''
